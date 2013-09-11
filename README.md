@@ -1,0 +1,4 @@
+lt-settings
+===========
+
+LightTable / settings
