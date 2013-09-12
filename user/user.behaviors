@@ -12,16 +12,19 @@
 {:+ {
      ;; The app tag is kind of like global scope. You assign behaviors that affect
      ;; all of Light Table here
-     :app [(:lt.objs.style/set-skin "dark")]
+     :app [(:lt.objs.style/set-skin "dark")
+           :lt.objs.deploy/check-version]
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
               (:lt.objs.style/set-theme "default")
               (:lt.objs.style/font-settings "Meslo LG M DZ" 13)
               :lt.plugins.vim/activate-vim
+              :lt.plugins.auto-complete/auto-show-on-input
               :lt.objs.editor.file/remove-trailing-whitespace
               :lt.objs.editor.file/last-char-newline
               ]
+
      ;; Here we can add behaviors to just clojure editors
      :editor.clojure [(:lt.objs.langs.clj/print-length 1000)]}
 
