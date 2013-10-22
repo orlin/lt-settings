@@ -26,7 +26,7 @@
                                       "j" "gj",
                                       "k" "gk"})
            (:lt.objs.files/file.ignore-pattern "(^\\..*)|\\.class$|target/|svn|cvs|\\.git|\\.pyc|~|\\.swp|\\.jar|.DS_Store|_site/|_cache/|__pycache__")
-           :lt.objs.intro/show-new-file
+           ;; :lt.objs.intro/show-new-file ; this would just take up tab space, easy with command / keystroke (cmd-n)
            ]
 
      ;; The editor tag is applied to all editors
