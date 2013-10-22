@@ -14,7 +14,11 @@
      ;; all of Light Table here
      :app [(:lt.objs.style/set-skin "dark")
            :lt.objs.deploy/check-version
-           (:lt.objs.sidebar.workspace/workspace.open-on-start)]
+           (:lt.objs.sidebar.workspace/workspace.open-on-start)
+           (:lt.objs.app/run-on-init [:window.maximize
+                                      ;:toggle-console
+                                      ])
+           ]
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
