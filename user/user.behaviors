@@ -16,8 +16,17 @@
            :lt.objs.deploy/check-version
            (:lt.objs.sidebar.workspace/workspace.open-on-start)
            (:lt.objs.app/run-on-init [:window.maximize
+                                      ;:window.fullscreen
                                       ;:toggle-console
                                       ])
+           (:lt.plugins.vim/map-keys {"-" "$",
+                                      "0" "^",
+                                      "<BS>" "<PageUp>",
+                                      "<Space>" "<PageDown>",
+                                      "j" "gj",
+                                      "k" "gk"})
+           (:lt.objs.files/file.ignore-pattern "(^\\..*)|\\.class$|target/|svn|cvs|\\.git|\\.pyc|~|\\.swp|\\.jar|.DS_Store|_site/|_cache/|__pycache__")
+           :lt.objs.intro/show-new-file
            ]
 
      ;; The editor tag is applied to all editors
@@ -25,13 +34,20 @@
               (:lt.objs.style/set-theme "default")
               (:lt.objs.style/font-settings "Meslo LG M DZ" 13)
               :lt.plugins.vim/activate-vim
+              :lt.objs.editor/highlight-current-line
               :lt.plugins.auto-complete/auto-show-on-input
               :lt.objs.editor.file/remove-trailing-whitespace
               :lt.objs.editor.file/last-char-newline
               ]
 
-     ;; Here we can add behaviors to just clojure editors
-     :editor.clojure [(:lt.objs.langs.clj/print-length 1000)]
+     :editor.clj.instarepl [:lt.plugins.rainbow-parens/rainbow-parens
+                            (:lt.objs.langs.clj/print-length 1000)]
+
+     :editor.cljs [:lt.plugins.rainbow-parens/rainbow-parens]
+
+     :editor.markdown [:lt.objs.editor/wrap]
+     :editor.plaintext [:lt.objs.editor/wrap]
+     :editor.python [(:lt.objs.style/set-theme "tomorrow-night")]
 
      :files [(:lt.objs.files/file-types
                [{:name "edn", :exts [:edn]
