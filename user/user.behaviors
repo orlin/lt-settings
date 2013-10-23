@@ -55,6 +55,7 @@
                  :tags [:editor.clj]}
                 ])]}
 
+
  ;; You can use the subtract key to remove behavior that may get added by
  ;; another diff
  :- {:app [:lt.objs.intro/show-intro]}}

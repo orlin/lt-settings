@@ -11,11 +11,13 @@
 ;; want to do in between the square brackets (e.g. type "editor").
 
 {:+ {:app {"cmd-alt-space" [:show-commandbar-transient]
+           "cmd-alt-c" [:show-connect]
            "cmd-shift-f" [:searcher.show]
-           ;;Toggle Console (in a couple of ways)
-           "cmd-alt-down" [:toggle-console]
            "cmd-k" [:toggle-console]
            "cmd-t" [:workspace.show]
+           ;; Documentation
+           "cmd-alt-down" [:editor.doc.toggle]
+           "ctrl-cmd-alt-down" [:docs.search.show]
            ;;Tabsets
            "cmd-shift-t" [:tabset.new]
            "ctrl-shift-left" [:tabs.move-prev-tabset]
