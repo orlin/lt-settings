@@ -13,8 +13,10 @@
 {:+ {:app {"cmd-alt-space" [:show-commandbar-transient]
            "cmd-alt-c" [:show-connect]
            "cmd-shift-f" [:searcher.show]
-           "cmd-k" [:toggle-console]
            "cmd-t" [:workspace.show]
+           ;; Konsole - toggle / klear
+           "cmd-k" [:toggle-console]
+           "alt-cmd-k" [:clear-console]
            ;; Documentation
            "cmd-alt-down" [:editor.doc.toggle]
            "ctrl-cmd-alt-down" [:docs.search.show]
