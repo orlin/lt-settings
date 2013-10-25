@@ -28,6 +28,7 @@
                                       ",/" ":ltexec find.clear"})
            (:lt.objs.files/file.ignore-pattern "(^\\..*)|\\.class$|target/|svn|cvs|\\.git|\\.pyc|~|\\.swp|\\.jar|.DS_Store|_site/|_cache/|__pycache__")
            ;; :lt.objs.intro/show-new-file ; this would just take up tab space, easy with command / keystroke (cmd-n)
+
            ]
 
      ;; The editor tag is applied to all editors
@@ -39,10 +40,12 @@
               :lt.plugins.auto-complete/auto-show-on-input
               :lt.objs.editor.file/remove-trailing-whitespace
               :lt.objs.editor.file/last-char-newline
+              (:lt.objs.instarepl/start-content "")
               ]
 
      :editor.clj.instarepl [:lt.plugins.rainbow-parens/rainbow-parens
-                            (:lt.objs.langs.clj/print-length 1000)]
+                            (:lt.objs.langs.clj/print-length 1000)
+                            :lt.objs.langs.clj/highlight-comment-forms]
 
      :editor.cljs [:lt.plugins.rainbow-parens/rainbow-parens]
 
