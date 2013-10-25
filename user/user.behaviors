@@ -19,8 +19,8 @@
                                       ;:window.fullscreen
                                       ;:toggle-console
                                       ])
-           (:lt.plugins.vim/map-keys {"-" "$"
-                                      "0" "^"
+           (:lt.plugins.vim/map-keys {"0" "^"
+                                      "-" "$"
                                       "<BS>" "<PageUp>"
                                       "<Space>" "<PageDown>"
                                       "j" "gj"
