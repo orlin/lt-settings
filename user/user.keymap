@@ -16,7 +16,7 @@
            "cmd-t" [:workspace.show]
            ;; Konsole - toggle / klear
            "cmd-k" [:toggle-console]
-           "alt-cmd-k" [:clear-console]
+           "cmd-shift-k" [:clear-console]
            ;; Documentation
            "cmd-alt-down" [:editor.doc.toggle]
            "ctrl-cmd-alt-down" [:docs.search.show]
