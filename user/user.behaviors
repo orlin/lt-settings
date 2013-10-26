@@ -52,13 +52,7 @@
      :editor.markdown [:lt.objs.editor/wrap]
      :editor.plaintext [:lt.objs.editor/wrap]
      :editor.python [(:lt.objs.style/set-theme "tomorrow-night")]
-
-     :files [(:lt.objs.files/file-types
-               [{:name "edn", :exts [:edn]
-                 :mime "text/x-clojurescript"
-                 :tags [:editor.clj]}
-                ])]}
-
+     }
 
  ;; You can use the subtract key to remove behavior that may get added by
  ;; another diff
