@@ -30,7 +30,8 @@
      :tabs {"cmd-alt-left" [:tabs.prev]
             "cmd-alt-right" [:tabs.next]}
 
-     :editor {"alt-w" [:editor.watch.watch-selection]
+     :editor {"cmd-i" [:instarepl.toggle-live]
+              "alt-w" [:editor.watch.watch-selection]
               "alt-up" [(:emacs.keymap-cmd "Ctrl-Alt-U")]
               "alt-m" [:editor.line-start-smart]
               ;;Eval the parent ( ... )
