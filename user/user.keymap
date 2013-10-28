@@ -28,7 +28,7 @@
            "ctrl-alt-cmd-right" [:tabset.next]}
 
      :tabs {"cmd-alt-left" [:tabs.prev]
-            "cmd-alt-right" [:tabs.next]}}
+            "cmd-alt-right" [:tabs.next]}
 
      :editor {"alt-w" [:editor.watch.watch-selection]
               "alt-up" [(:emacs.keymap-cmd "Ctrl-Alt-U")]
@@ -38,7 +38,8 @@
                            :eval-editor-form
                            :paredit.select.clear]
               "alt-shift-w" [:editor.watch.unwatch]
-              "cmd-shift-/" [:toggle-comment-selection]}
+              "cmd-shift-/" [:toggle-comment-selection]
+              }
 
      :editor.keys.vim.normal {"cmd-d" [:editor.doc.toggle]
                               ;;Select the parent expression, whether that's [], {}, or ()
@@ -52,4 +53,4 @@
                               "<" [:paredit.shrink.right]
                               "alt-shift-," [:paredit.shrink.left]
                               "alt-shift-." [:paredit.grow.left]}
-     }
+     }}
