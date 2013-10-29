@@ -34,6 +34,7 @@
               (:lt.objs.style/set-theme "default")
               (:lt.objs.style/font-settings "Meslo LG M DZ" 13)
               :lt.plugins.vim/activate-vim
+              :lt.objs.editor/hide-line-numbers ; cmd-l for going to a line
               :lt.objs.editor/highlight-current-line
               :lt.plugins.auto-complete/auto-show-on-input
               :lt.objs.editor.file/remove-trailing-whitespace
