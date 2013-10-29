@@ -15,9 +15,7 @@
      :app [(:lt.objs.style/set-skin "dark")
            :lt.objs.deploy/check-version
            (:lt.objs.sidebar.workspace/workspace.open-on-start)
-           (:lt.objs.app/run-on-init [:window.maximize
-                                      ;:window.fullscreen
-                                      ;:toggle-console
+           (:lt.objs.app/run-on-init [:window.fullscreen
                                       ])
            (:lt.plugins.vim/map-keys {"0" "^"
                                       "-" "$"
